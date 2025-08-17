@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>甘的网站</title>
+	<meta charset="utf-8">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=ZCOOL+QingKe+HuangYou&display=swap');
+		
+		body {
+			margin: 0;
+			padding: 20px;
+			font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+			background-color: #f9f5f0;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 40px;
+			font-family: 'Ma Shan Zheng', cursive;
+			font-size: 42px;
+			color: #000000;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+		}
+		.heading {
+			font-size: 28px;
+			margin-bottom: 15px;
+			padding-bottom: 10px;
+			border-bottom: 3px solid #ff6b6b;
+			display: inline-block;
+		}
+		.teachers-heading {
+			font-family: 'Ma Shan Zheng', cursive;
+			color: #6ecff6;
+		}
+		.students-heading {
+			font-family: 'Ma Shan Zheng', cursive;
+			color: #a0e7e7;
+		}
+		.teachers-section {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 300px;
+			max-width: 1500px;
+			margin: 0 auto;
+		}
+		.teachers-container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 30px;
+			width: 350px;
+		}
+		.teachers-container img {
+			width: 300px;
+			height: auto;
+			object-fit: cover;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		.students-container {
+			flex-grow: 1;
+			margin-left: 50px;
+		}
+		.image-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
+			justify-content: flex-start;
+		}
+		.image-container img {
+			width: 200px;
+			height: auto;
+			object-fit: cover;
+			border-radius: 6px;
+			transition: all 0.3s ease;
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+		}
+		.image-container img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+		}
+		.teacher-title {
+			font-weight: bold;
+			font-size: 20px;
+			margin-top: 8px;
+			text-align: center;
+			color: #7f8c8d;
+			font-family: 'ZCOOL KuaiLe', cursive;
+		}
+		/* 修改后的集体照样式 */
+		.group-photos {
+			margin-top: 50px;
+			text-align: center;
+		}
+		.group-photos h3 {
+			font-family: 'Ma Shan Zheng', cursive;
+			font-size: 28px;
+			color: #6ecff6;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.group-photos-container {
+			display: flex;
+			flex-direction: column;
+			gap: 15px; /* 行间距 */
+		}
+		.group-photo-row {
+			display: flex;
+			width: 100%;
+			gap: 0; /* 图片间无间隙 */
+		}
+		.group-photo-row:not(:last-child)::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 15px;
+			background-color: red;
+			margin-top: 15px;
+		}
+		.group-photo-item {
+			flex: 1 0 25%; /* 每行4张图片 */
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		.group-photo-item img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>我的高中时光</h1>
+	
+	<div class="teachers-section">
+		<div class="teachers-container">
+			<h2 class="heading teachers-heading">老师的帅照</h2>
+			<hr color="#e74c3c" size="3px" width="100%">
+			<div>
+				<img src="碧.jpg" title="余碧 班主任">
+				<div class="teacher-title">余碧 班主任</div>
+			</div>
+			<div>
+				<img src="何昭研.png" title="何昭妍 生物">
+				<div class="teacher-title">何昭妍 生物</div>
+			</div>
+			<div>
+				<img src="圆圆.jpg" title="袁媛 英语">
+				<div class="teacher-title">袁媛 英语</div>
+			</div>
+			<div>
+				<img src="陈波.jpg" title="陈波 化学">
+				<div class="teacher-title">陈波</div>
+			</div>
+			<div>
+				<img src="黎雪.png" title="黎雪 语文">
+				<div class="teacher-title">黎雪</div>
+			</div>
+			<div>
+				<img src="熊晖.jpg" title="熊晖 物理">
+				<div class="teacher-title">熊晖</div>
+			</div>
+			<div>
+				<img src="月.png" title="王月 英语">
+				<div class="teacher-title">王月</div>
+			</div>
+		</div>
+		
+		<div class="students-container">
+			<h2 class="heading students-heading">同学的帅照</h2>
+			<hr color="#e74c3c" size="3px" width="100%">
+			
+			<div class="image-container">
+				<img src="学1.jpg" title="赵佳颖" alt="赵佳颖">
+				<img src="学2.jpg" title="曾佳怡" alt="曾佳怡">
+				<img src="学3.jpg" title="周志伟" alt="周志伟">
+				<img src="学4.jpg" title="王晓明" alt="王晓明">
+				<img src="学6.jpg" title="马泽浩" alt="马泽浩">
+				<img src="学7.jpg" title="苏萌怡" alt="苏萌怡">
+				<img src="学8.jpg" title="李重阳" alt="李重阳">
+				<img src="学24.png" title="刘艾佳" alt="刘艾佳">
+				<img src="学12.jpg" title="王岳阳" alt="王岳阳">
+				<img src="学13.jpg" title="巫丝瑞" alt="巫丝瑞">
+				<img src="学29.jpg" title="朱铖镱" alt="朱铖镱">
+				<img src="学16.jpg" title="周鑫雨" alt="周鑫雨">
+				<img src="学17.jpg" title="伍正航" alt="伍正航">
+				<img src="学18.jpg" title="王蓉" alt="王蓉">
+				<img src="学19.jpeg" title="司念" alt="司念">
+				<img src="学20.jpg" title="赖鑫浩" alt="赖鑫浩">
+				<img src="学21.png" title="张鑫铜" alt="张鑫同">
+				<img src="学22.png" title="黄思怡" alt="黄思怡">
+				<img src="学23.jpg" title="宁美瑶" alt="宁美瑶">
+				<img src="郭雅琴.png" title="郭雅琴" alt="郭雅琴">
+				<img src="学26.jpg" title="林钰洁" alt="林钰洁">
+				<img src="吴梦涵.png" title="吴梦涵" alt="吴梦涵">
+				<img src="学28.jpg" title="白奕祥" alt="白奕祥">
+				<img src="阳青琪.png" title="阳青琪" alt="阳青琪">
+				<img src="曾姿侨.jpg" title="曾姿侨" alt="曾姿侨">
+				<img src="张梦阳.png" title="张梦阳" alt="张梦阳">
+				<img src="余思敏.png" title="余思敏" alt="余思敏">
+				<img src="杨珍熙.jpg" title="杨珍熙" alt="杨珍熙">
+				<img src="杨可欣.jpg" title="杨可欣" alt="杨可欣">
+				<img src="张书琪.jpg" title="张书琪" alt="张书琪">
+				<img src="向方涵.jpg" title="向方涵" alt="向方涵">
+				<img src="苏萌怡.jpeg" title="苏萌怡" alt="苏萌怡">
+				<img src="叶馥源.jpg" title="叶馥源" alt="叶馥源">
+				<img src="刘佳成.jpg" title="刘佳成" alt="刘佳成">
+				<img src="周鑫宇.jpeg" title="周鑫宇" alt="周鑫宇">
+				<img src="代永杰.jpg" title="代永杰" alt="代永杰">
+				<img src="席守培.jpg" title="席守培" alt="席守培">
+				<img src="刘入迫.jpg" title="刘入迫" alt="刘入迫">
+			</div>
+		</div>
+	</div>
+
+	<!-- 修改后的高中集体照部分 -->
+	<div class="group-photos">
+		<h3>高中集体照</h3>
+		<div class="group-photos-container">
+			<!-- 第一行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生1.jpg" alt="集体照1"></div>
+				<div class="group-photo-item"><img src="学生2.jpg" alt="集体照2"></div>
+				<div class="group-photo-item"><img src="学生3.jpg" alt="集体照3"></div>
+				<div class="group-photo-item"><img src="学生4.jpg" alt="集体照4"></div>
+			</div>
+			
+			<!-- 第二行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生5.jpg" alt="集体照5"></div>
+				<div class="group-photo-item"><img src="学生6.jpg" alt="集体照6"></div>
+				<div class="group-photo-item"><img src="学生7.jpg" alt="集体照7"></div>
+				<div class="group-photo-item"><img src="学生8.jpg" alt="集体照8"></div>
+			</div>
+			
+			<!-- 第三行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生9.jpg" alt="集体照9"></div>
+				<div class="group-photo-item"><img src="学生10.jpg" alt="集体照10"></div>
+				<div class="group-photo-item"><img src="学生11.jpg" alt="集体照11"></div>
+				<div class="group-photo-item"><img src="学生12.jpg" alt="集体照12"></div>
+			</div>
+			
+			<!-- 第四行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生13.jpg" alt="集体照13"></div>
+				<div class="group-photo-item"><img src="学生14.jpg" alt="集体照14"></div>
+				<div class="group-photo-item"><img src="学生15.jpg" alt="集体照15"></div>
+				<div class="group-photo-item"><img src="学生16.png" alt="集体照16"></div>
+			</div>
+			
+			<!-- 第五行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生17.jpg" alt="集体照17"></div>
+				<div class="group-photo-item"><img src="学生18.jpg" alt="集体照18"></div>
+				<div class="group-photo-item"><img src="学生20.jpg" alt="集体照20"></div>
+			</div>
+			
+			<!-- 第六行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生21.jpg" alt="集体照21"></div>
+				<div class="group-photo-item"><img src="学生22.jpg" alt="集体照22"></div>
+				<div class="group-photo-item"><img src="学生23.jpg" alt="集体照23"></div>
+				<div class="group-photo-item"><img src="学生24.jpg" alt="集体照24"></div>
+			</div>
+			
+			<!-- 第七行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生25.jpg" alt="集体照25"></div>
+				<div class="group-photo-item"><img src="学生26.jpg" alt="集体照26"></div>
+				<div class="group-photo-item"><img src="学生27.jpg" alt="集体照27"></div>
+				<div class="group-photo-item"><img src="学生28.jpg" alt="集体照28"></div>
+			</div>
+			
+			<!-- 第八行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生29.jpg" alt="集体照29"></div>
+				<div class="group-photo-item"><img src="学生30.jpg" alt="集体照30"></div>
+				<div class="group-photo-item"><img src="学生31.jpg" alt="集体照31"></div>
+				<div class="group-photo-item"><img src="学生32.jpg" alt="集体照32"></div>
+			</div>
+			
+			<!-- 第九行 -->
+			<div class="group-photo-row">
+				<div class="group-photo-item"><img src="学生33.jpg" alt="集体照33"></div>
+				<div class="group-photo-item"><img src="学生34.jpg" alt="集体照34"></div>
+				<div class="group-photo-item"><img src="学生35.jpg" alt="集体照35"></div>
+				<div class="group-photo-item"><img src="学生36.jpg" alt="集体照36"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
