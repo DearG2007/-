@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>单元2 计算机网络基本操作</title>
+<style>
+body {
+font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: #f5f6fa;
+color: #333;
+}
+.slide {
+max-width: 1024px;
+margin: 40px auto;
+padding: 60px 40px;
+background: #fff;
+border-radius: 12px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+box-sizing: border-box;
+}
+h1, h2 {
+margin-top: 0;
+}
+h1 { font-size: 2.8em; border-bottom: 4px solid #2c3e50; padding-bottom: 12px; }
+h2 { font-size: 2em; border-left: 6px solid #3498db; padding-left: 16px; }
+h3 { font-size: 1.6em; color: #2980b9; }
+h4 { font-size: 1.3em; color: #16a085; }
+ul { font-size: 1.15em; line-height: 1.8; padding-left: 24px; }
+li { margin-bottom: 0.6em; }
+.note {
+font-size: 1em;
+color: #7f8c8d;
+font-style: italic;
+margin-top: 1em;
+padding-top: 0.8em;
+border-top: 1px dashed #bdc3c7;
+}
+.cmd {
+background-color: #2c3e50;
+color: #ecf0f1;
+padding: 12px 16px;
+border-radius: 6px;
+font-family: Consolas, "Courier New", monospace;
+display: inline-block;
+margin: 4px 0;
+}
+.warn {
+background-color: #fdf6ec;
+border: 1px solid #faad14;
+color: #c53030;
+padding: 10px 14px;
+border-radius: 6px;
+margin-top: 10px;
+}
+.ref {
+font-size: 0.95em;
+color: #555;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+<h1>单元2 计算机网络基本操作</h1>
+<h2>局域网配置、文件共享与网络工具</h2>
+<div class="ref">
+教材信息：《<strong>计算机应用基础教程（Windows 10+Office 2016）</strong>》
+
+主编：<strong>陈小海、刘利民、甘杜芬</strong>
+
+页码范围：<strong>17–32</strong>
+</div>
+</div>
+<div class="slide">
+<h2>目录</h2>
+<ul>
+<li><strong>实验1</strong> 局域网的基本配置（<strong>17页</strong>）</li>
+<li><strong>实验2</strong> 文件与打印机共享设置与应用（<strong>23页</strong>）</li>
+<li><strong>实验3</strong> 常用网络测试工具的应用（<strong>32页</strong>）</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验1 局域网的基本配置（一）</h2>
+<h3>实验目的</h3>
+<ul>
+<li>掌握局域网（<strong>LAN</strong>）的基本概念</li>
+<li>学会<strong>Windows 10</strong>下局域网的配置方法</li>
+<li>理解<strong>IP地址</strong>、<strong>子网掩码</strong>的作用</li>
+</ul>
+<h3>知识铺垫</h3>
+<ul>
+<li>局域网是在小范围内（如<strong>办公室、教室</strong>）将计算机等设备互联的网络</li>
+<li><strong>IP地址</strong>是设备在网络中的“身份标识”，如 <code>192.168.1.xxx</code> 是常见的局域网IP段</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验1 局域网的基本配置（二）</h2>
+<h3>操作步骤（简化）</h3>
+<ul>
+<li>打开：<strong>控制面板 → 网络和Internet → 网络和共享中心</strong></li>
+<li>点击<strong>更改适配器设置</strong>，找到当前连接的网络（如<strong>以太网</strong>）</li>
+<li>右键选择<strong>属性</strong>，双击<strong>Internet协议版本4（TCP/IPv4）</strong></li>
+<li>配置<strong>IP地址</strong>（如 <code>192.168.1.100</code>）、<strong>子网掩码</strong>（默认 <code>255.255.255.0</code>），点击<strong>确定</strong></li>
+</ul>
+<h3>验证方法</h3>
+<ul>
+<li>打开命令提示符（<strong>cmd</strong>），输入：<span class="cmd">ipconfig</span> 查看IP配置是否生效</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验2 文件与打印机共享设置与应用（一）</h2>
+<h3>实验目的</h3>
+<ul>
+<li>掌握<strong>Windows 10</strong>下<strong>文件</strong>和<strong>打印机</strong>共享的开启方法</li>
+<li>学会在局域网内<strong>访问共享资源</strong></li>
+</ul>
+<h3>应用场景</h3>
+<ul>
+<li>办公室内<strong>多人共享文件</strong>、<strong>打印机</strong>，提高办公效率</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验2 文件与打印机共享设置与应用（二）</h2>
+<h3>文件共享步骤</h3>
+<ul>
+<li>选择需要共享的文件夹，右键→<strong>属性 → 共享</strong>选项卡</li>
+<li>点击<strong>共享</strong>，选择要共享的用户（如<strong>Everyone</strong>），设置权限后点击<strong>共享</strong></li>
+<li>其他计算机可通过<strong>网络 → 对方计算机名</strong>访问共享文件夹</li>
+</ul>
+<h3>打印机共享步骤</h3>
+<ul>
+<li>打开<strong>设置 → 设备 → 打印机和扫描仪</strong>，选择要共享的打印机</li>
+<li>点击<strong>管理 → 打印机属性 → 共享</strong>选项卡，勾选<strong>共享这台打印机</strong>并设置共享名</li>
+<li>其他计算机可通过<strong>添加打印机 → 网络打印机</strong>找到并安装共享打印机</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验3 常用网络测试工具的应用（一）</h2>
+<h3>常用工具</h3>
+<ul>
+<li><strong>ping</strong>：测试网络连通性</li>
+<li><strong>ipconfig</strong>：查看本地网络配置</li>
+<li><strong>tracert</strong>：追踪数据包传输路径</li>
+</ul>
+<h3>工具作用</h3>
+<ul>
+<li>帮助排查网络故障（如<strong>无法上网</strong>、<strong>连接不稳定</strong>等）</li>
+</ul>
+</div>
+<div class="slide">
+<h2>实验3 常用网络测试工具的应用（二）</h2>
+<h3>操作示例</h3>
+<ul>
+<li><strong>ping</strong>命令：打开 <strong>cmd</strong>，输入 <span class="cmd">ping www.baidu.com</span>，查看是否有数据包返回（判断是否能连接互联网）</li>
+<li><strong>ipconfig</strong>命令：输入 <span class="cmd">ipconfig /all</span>，可查看详细的<strong>IP、子网掩码、网关、DNS</strong>等信息</li>
+<li><strong>tracert</strong>命令：输入 <span class="cmd">tracert www.sina.com.cn</span>，可查看数据包到新浪服务器经过的节点</li>
+</ul>
+<h3>故障排查思路</h3>
+<ul>
+<li>先 <strong>ping 网关</strong>（如 <code>192.168.1.1</code>）判断局域网是否通</li>
+<li>再 <strong>ping 外网</strong>判断是否是宽带问题</li>
+</ul>
+<div class="warn">
+修正说明：原文中“<code>tracer t</code>”为拼写错误，正确命令为<strong>tracert</strong>。
+</div>
+</div>
+<div class="slide">
+<h2>单元2 总结</h2>
+<h3>重点回顾</h3>
+<ul>
+<li><strong>局域网配置</strong>的核心是<strong>IP地址</strong>和<strong>子网掩码</strong>的设置</li>
+<li><strong>文件/打印机共享</strong>是局域网资源协同的关键操作</li>
+<li><strong>网络测试工具</strong>是排查网络问题的<strong>利器</strong></li>
+</ul>
+<h3>学习建议</h3>
+<ul>
+<li>多动手实操，在<strong>实验室</strong>或<strong>班级局域网</strong>环境中反复练习，巩固操作熟练</li>
+</ul>
+</div>
+</body>
+</html>
